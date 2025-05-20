@@ -8,7 +8,7 @@ SimpleSerialAnalyzerSettings::SimpleSerialAnalyzerSettings()
 	mInputChannelInterface(),
 	mBitRateInterface()
 {
-	mInputChannelInterface.SetTitleAndTooltip( "Serial", "Standard Simple Serial" );
+	mInputChannelInterface.SetTitleAndTooltip( "Serial", "Standard Simple Serial Bitstream Analyzer" );
 	mInputChannelInterface.SetChannel( mInputChannel );
 
 	mBitRateInterface.SetTitleAndTooltip( "Bit Rate (Bits/S)",  "Specify the bit rate in bits per second." );
@@ -37,7 +37,7 @@ bool SimpleSerialAnalyzerSettings::SetSettingsFromInterfaces()
 	mBitRate = mBitRateInterface.GetInteger();
 
 	ClearChannels();
-	AddChannel( mInputChannel, "Simple Serial", true );
+	AddChannel( mInputChannel, "Simple Serial Bitstream Analyzer", true );
 
 	return true;
 }
@@ -57,7 +57,7 @@ void SimpleSerialAnalyzerSettings::LoadSettings( const char* settings )
 	text_archive >> mBitRate;
 
 	ClearChannels();
-	AddChannel( mInputChannel, "Simple Serial", true );
+	AddChannel( mInputChannel, "Simple Serial Bitstream Analyzer", true );
 
 	UpdateInterfacesFromSettings();
 }

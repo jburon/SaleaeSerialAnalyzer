@@ -96,12 +96,12 @@ U32 SimpleSerialAnalyzer::GetMinimumSampleRateHz()
 
 const char* SimpleSerialAnalyzer::GetAnalyzerName() const
 {
-	return "Simple Serial";
+	return "Simple Serial Bitstream Analyzer";
 }
 
 const char* GetAnalyzerName()
 {
-	return "Simple Serial";
+	return "Simple Serial Bitstream Analyzer";
 }
 
 Analyzer* CreateAnalyzer()
